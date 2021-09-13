@@ -1,0 +1,1 @@
+Homework about standard .NET methods that brings happiness into the world
