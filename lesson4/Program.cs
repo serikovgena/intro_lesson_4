@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+using lesson4.ArrayFromString;
 using lesson4.Name;
 
 namespace lesson4
@@ -8,6 +10,8 @@ namespace lesson4
         static void Main()
         {
             ShowSomeNames();
+            var numbers = Parser.GetNumbersFrom(Console.ReadLine());
+            Console.WriteLine(SumNumbers(numbers));
         }
 
         private static void ShowSomeNames()
@@ -16,5 +20,7 @@ namespace lesson4
             Console.WriteLine(new FullName("AAA", "CCC", "BBB").GetName());
             Console.WriteLine(new FullName("Александр", "Путин", "Сергевич").GetName());
         }
+
+        public static double SumNumbers(params double[] array) => array.Aggregate((x,y) => x + y);
     }
 }
