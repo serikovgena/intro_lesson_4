@@ -10,9 +10,10 @@ namespace lesson4
     {
         static void Main()
         {
-            ShowSomeNames();
-            ShowSumNumbers();
-            ShowSeason();
+            //ShowSomeNames();
+            //ShowSumNumbers();
+            //ShowSeason();
+            ShowFibonachiNum();
         }
 
         static void ShowSomeNames()
@@ -37,6 +38,19 @@ namespace lesson4
             int monthNum = Convert.ToInt32(Console.ReadLine());
             Season season = YearSeason.RevealSeasonBy(monthNum);
             Console.WriteLine($"You inserted {season}'s month!");
+        }
+
+        static void ShowFibonachiNum()
+        {
+            Console.Write("insert number of fibonachi's digit: ");
+            Console.WriteLine($"fibonachi num is : {GetFibonachiNumBy(Convert.ToInt32(Console.ReadLine()))}");
+        }
+        static int GetFibonachiNumBy(int num)
+        {
+            if (num <= 1) return 0;
+            if (num == 2) return 1;
+            else
+                return GetFibonachiNumBy(num - 2) + GetFibonachiNumBy(num - 1); // 3 -> (2 + 1) -> 0 + 1 = 1 
         }
     }
 }
