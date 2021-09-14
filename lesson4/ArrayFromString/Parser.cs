@@ -15,9 +15,8 @@ namespace lesson4.ArrayFromString
 
             try
             {
-                var temp = strNumbers.Split(' ', StringSplitOptions.RemoveEmptyEntries);
-                var temp2 = temp.Select(x => { return double.Parse(x.Replace(',', '.'), CultureInfo.InvariantCulture); });
-                return temp2.ToArray();
+                var stringNumberArray = strNumbers.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+                return stringNumberArray.Select(x => { return double.Parse(x.Replace(',', '.'), CultureInfo.InvariantCulture); }).ToArray();
             }
             catch (ArgumentNullException)
             {
