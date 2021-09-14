@@ -10,9 +10,9 @@ namespace lesson4
     {
         static void Main()
         {
-            //ShowSomeNames();
-            //ShowSumNumbers();
-            //ShowSeason();
+            ShowSomeNames();
+            ShowSumNumbers();
+            ShowSeason();
             ShowFibonachiNum();
         }
 
